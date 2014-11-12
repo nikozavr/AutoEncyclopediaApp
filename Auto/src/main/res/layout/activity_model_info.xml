@@ -1,0 +1,169 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background_layout">
+<!--
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/layout_model_info">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentStart="true"
+            android:paddingBottom="5dp"
+            android:background="@color/background_top"
+            android:id="@+id/layout_top">
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/imModel"
+                android:layout_margin="5dp" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Large Text"
+                        android:id="@+id/lblNameModel"
+                        android:gravity="bottom"
+                        android:textStyle="bold"
+                        android:textSize="25dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:id="@+id/lblModelMarq"
+                        android:layout_gravity="center_horizontal"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:id="@+id/lblModelYear"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+                <Button
+                    android:theme="@style/ActionBarButton"
+                    android:visibility="invisible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:text="@string/all_geners"
+                    android:id="@+id/btnModelChange"
+                    android:layout_gravity="right"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="false"
+                    android:layout_alignParentBottom="true"
+                    android:textSize="12dp"
+                    android:layout_marginRight="10dp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="@color/background_line2"
+            android:id="@+id/layout_line"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="invisible"
+                android:id="@+id/scrollViewModel"
+                android:scrollbars="vertical">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/background">
+
+                    <HorizontalScrollView
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/photo_height"
+                        android:background="@color/background_layout"
+                        android:id="@+id/photo_scroll"
+                        android:layout_marginBottom="1dp"
+                        android:scrollbars="horizontal">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:orientation="horizontal"
+                            android:id="@+id/photoScrollModels">
+
+                        </LinearLayout>
+
+                    </HorizontalScrollView>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_below="@id/layout_top"
+                        android:id="@+id/layout_info"
+                        android:background="@color/background_layout"
+                        android:layout_marginBottom="1dp">
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:id="@+id/txtInfoModel"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="5dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <ListView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/lstGenerations"
+                android:visibility="invisible"
+                android:listSelector="@color/blue" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="@string/downloading"
+        android:gravity="center"
+        android:layout_alignParentStart="false"
+        android:textSize="26dp"
+        android:textColor="#000000"
+        android:id="@+id/lblDownloadModel" />
+-->
+</RelativeLayout>

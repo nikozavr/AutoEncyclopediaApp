@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">АвтоЭнциклопедия</string>
+    <string name="action_settings">Настройка</string>
+    <string name="action_help">Помощь</string>
+    <string name="action_edit">Редактировать</string>
+    <string name="search_title">Поиск</string>
+    <string name="action_exit">Выход</string>
+    <string name="action_refresh">Обновить</string>
+    <string name="action_home">Домой</string>
+    <string name="error_connect">Ошибка соединения с интернетом</string>
+    <string name="error_server">Ошибка сервера</string>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_name_items">
+        <item>Профиль</item>
+        <item>Главная</item>
+        <item>Марки</item>
+        <item>Настройки</item>
+        <item>Помощь</item>
+        <item>О приложение</item>
+    </string-array>
+
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons_items">
+        <item>@drawable/ic_menu_friendslist</item>
+        <item>@drawable/ic_menu_home</item>
+        <item>@drawable/ic_menu_selectall_holo_dark</item>
+        <item>@drawable/ic_action_settings</item>
+        <item>@drawable/ic_action_help</item>
+        <item>@drawable/ic_menu_info_details</item>
+    </array>
+
+    <array name="nav_drawer_list_items">
+        <item>profile</item>
+        <item>home</item>
+        <item>marques</item>
+        <item>settings</item>
+        <item>help</item>
+        <item>about</item>
+    </array>
+
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="prof_perm">Права:</string>
+    <string name="prof_email">Email:</string>
+    <string name="prof_login">Логин:</string>
+    <string name="prof_Exit">Выход</string>
+    <string name="title_activity_marq_info">Информация о марке</string>
+    <string name="title_dictionary">Словарь</string>
+    <string name="title_activity_list_cars">ListCarsActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_model_info">Информация о модели</string>
+    <string name="downloading">Загрузка...</string>
+    <string name="title_activity_full_screen_image">FullScreenImageActivity</string>
+    <string name="title_activity_edit">EditActivity</string>
+    <string name="info">    Данное </string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+
+</resources>

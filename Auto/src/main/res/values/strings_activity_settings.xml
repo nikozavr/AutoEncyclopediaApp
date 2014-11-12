@@ -1,0 +1,25 @@
+<resources>
+        <string name="title_activity_settings">Настройки</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">Основные</string>
+
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_cache">Использование кэша</string>
+
+    <string name="pref_title_allow_cache">Разрешить использование кеша</string>
+    <string name="pref_title_clean_cache">Очистить кэш приложения</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Уведомления</string>
+
+    <string name="pref_title_new_message_notifications">Разрешить уведомления</string>
+
+    <string name="pref_title_ringtone">Мелодия</string>
+    <string name="pref_ringtone_silent">Без звука</string>
+
+    <string name="pref_title_vibrate">Вибрация</string>
+</resources>

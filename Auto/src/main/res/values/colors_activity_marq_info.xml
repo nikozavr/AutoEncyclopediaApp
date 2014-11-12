@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_top">#808080</color>
+    <color name="background_line">#A4C739</color>
+    <color name="background_line2">#272727</color>
+    <color name="background_layout">#ffcccccc</color>
+    <color name="background">#7f7f7f</color>
+    <color name="background_pressed">#666666</color>
+    <color name="test">#343434</color>
+
+</resources>

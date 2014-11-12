@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="marq">Марка: </string>
+    <string name="years">Года выпуска: </string>
+
+    <string name="all_geners">Все поколения</string>
+    <string name="all_mod">Все модификации</string>
+    <string name="info_model">Информация</string>
+
+</resources>

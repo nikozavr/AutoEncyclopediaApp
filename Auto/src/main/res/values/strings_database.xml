@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="url_get_all">http://www.nikozavr.ru/autos/get_all_marq.php</string>
+    <string name="url_get_marq_models">http://www.nikozavr.ru/autos/get_marq_models.php</string>
+    <string name="url_get_marq_info">http://www.nikozavr.ru/autos/get_info_marq.php</string>
+    <string name="url_get_model_info">http://www.nikozavr.ru/autos/get_info_model.php</string>
+    <string name="url_get_model_geners">http://www.nikozavr.ru/autos/get_model_geners.php</string>
+    <string name="url_get_gener_info">http://www.nikozavr.ru/autos/get_info_gener.php</string>
+
+
+</resources>

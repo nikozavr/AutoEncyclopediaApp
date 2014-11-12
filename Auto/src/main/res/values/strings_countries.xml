@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="country_code">
+        <item>Australia</item>
+        <item>China</item>
+        <item>France</item>
+        <item>Germany</item>
+        <item>Hong Kong</item>
+        <item>Italy</item>
+        <item>Japan</item>
+        <item>Romania</item>
+        <item>Russia</item>
+        <item>South Korea</item>
+        <item>United Kingdom</item>
+        <item>USA</item>
+        <item>Sweden</item>
+        <item>Spain</item>
+        <item>Czech Republic</item>
+    </string-array>
+
+
+    <string-array name="country_name">
+        <item>Австралия</item>
+        <item>Китай</item>
+        <item>Франция</item>
+        <item>Германия</item>
+        <item>Гонконг</item>
+        <item>Италия</item>
+        <item>Япония</item>
+        <item>Румыния</item>
+        <item>Россия</item>
+        <item>Южная Корея</item>
+        <item>Великобритания</item>
+        <item>США</item>
+        <item>Швеция</item>
+        <item>Испания</item>
+        <item>Чехия</item>
+    </string-array>
+
+</resources>

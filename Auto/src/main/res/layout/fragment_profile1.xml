@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prof_login"
+        android:id="@+id/lblLogin"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="27dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prof_email"
+        android:id="@+id/lblEmail"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_below="@+id/lblLogin"
+        android:layout_alignStart="@+id/lblLogin"
+        android:layout_marginTop="22dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prof_perm"
+        android:id="@+id/lblPermission"
+        android:layout_marginTop="25dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/lblEmail"
+        android:layout_alignStart="@+id/lblEmail" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtLogin"
+        android:textSize="20dp"
+        android:layout_above="@+id/lblEmail"
+        android:layout_toRightOf="@+id/lblPermission"
+        android:layout_marginLeft="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtEmail"
+        android:layout_above="@+id/lblPermission"
+        android:textSize="20dp"
+        android:layout_alignLeft="@+id/txtLogin" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPermission"
+        android:layout_alignBottom="@+id/lblPermission"
+        android:layout_toRightOf="@+id/lblLogin"
+        android:layout_marginLeft="22dp"
+        android:textSize="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выход"
+        android:id="@+id/btnExit"
+        android:layout_marginRight="29dp"
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/txtPermission"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ru.nikozavr.auto.ModelInfoActivity" >
+
+    <item
+        android:id="@+id/action_model_refresh"
+        android:orderInCategory="100"
+        android:title="@string/action_refresh"
+        android:showAsAction="collapseActionView|ifRoom"
+        android:icon="@drawable/ic_action_refresh"/>
+
+    <item android:id="@+id/action_model_home"
+        android:title="@string/action_home"
+        android:orderInCategory="200"
+        android:showAsAction="never" />
+
+    <item android:id="@+id/action_model_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="300"
+        android:showAsAction="never" />
+</menu>
+<!-- From: file:/G:/GitHub/AutoEncyclopediaApp/Auto/src/main/res/menu/model_info.xml -->

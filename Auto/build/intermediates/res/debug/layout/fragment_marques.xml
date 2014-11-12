@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_marques"
+    android:background="@color/background_layout">
+
+    <GridView
+        android:id="@+id/marqView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:columnWidth="100dp"
+        android:gravity="center"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="5dp"
+        android:drawSelectorOnTop="true"
+        android:stretchMode="columnWidth">
+    </GridView>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="@string/downloading"
+        android:id="@+id/txtDownloadMarq"
+        android:textSize="26dp"
+        android:gravity="center_vertical|center_horizontal" />
+
+</RelativeLayout>
+<!-- From: file:/G:/GitHub/AutoEncyclopediaApp/Auto/src/main/res/layout/fragment_marques.xml -->

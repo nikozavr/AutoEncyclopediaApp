@@ -1,0 +1,5 @@
+G:\GitHub\AutoEncyclopediaApp\Auto\build\intermediates\pre-dexed\debug\classes-237206aad73b9d9c2873f090f60ea341d676b258.jar
+G:\GitHub\AutoEncyclopediaApp\Auto\build\intermediates\pre-dexed\debug\classes-ed4c5621990f6f64243a9037ce2e00a591305da8.jar
+G:\GitHub\AutoEncyclopediaApp\Auto\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-76d47c6248e5ce2997db6ab8186503a98fb21799.jar
+G:\GitHub\AutoEncyclopediaApp\Auto\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-80e839762042aeb2bf74f5dde51ddeacbb8eb838.jar
+G:\GitHub\AutoEncyclopediaApp\Auto\build\intermediates\classes\debug

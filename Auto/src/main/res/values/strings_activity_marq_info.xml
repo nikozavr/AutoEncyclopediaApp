@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="country">Страна: </string>
+    <string name="year">Основан: </string>
+    
+    <string name="all_models">Все модели</string>
+    <string name="info_marq">Информация</string>
+
+
+    <string name="error_info">Информация отсутствует</string>
+
+</resources>
