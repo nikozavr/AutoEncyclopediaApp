@@ -42,14 +42,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
         tr.replace(R.id.frame_container, home, "home");
         tr.addToBackStack("home");
         tr.commit();
-        mDrawerList = (ListView)getActivity().findViewById(R.id.list_slidermenu);
-     //   navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
-        mDrawerLayout = (DrawerLayout)getActivity().findViewById(R.id.drawer_layout);
 
-        mDrawerList.setItemChecked(1, true);
-        mDrawerList.setSelection(1);
-        getActivity().setTitle(navMenuTitles[1]);
-        mDrawerLayout.closeDrawer(mDrawerList);
     }
 
 	@Override
@@ -77,7 +70,6 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
     public void onResume()
     {
         super.onResume();
-        if(globe.isLoggedIn()) {
             String[] info;
             globe = (AutoEncyclopedia) getActivity().getApplicationContext();
             info = globe.getUserDetails();
@@ -95,17 +87,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
 
             txtDownloading.setVisibility(View.INVISIBLE);
             txtNoEdition.setVisibility(View.VISIBLE);
-        } else {
-            Logging();
-        }
 
-    }
-
-
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        ((MainActivity) activity).onSectionAttached(1);
     }
 
     private void Logging(){

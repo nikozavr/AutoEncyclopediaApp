@@ -2,32 +2,32 @@
 <items version="2" >
 
     <item
-        jar="G:\GitHub\AutoEncyclopediaApp\Auto\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\classes.jar"
+        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.2\support-annotations-21.0.2.jar"
         jumboMode="false"
         revision="21.1.0"
-        sha1="686344a780033e4ba22b926cd225f8d4941247e6">
-        <dex dex="G:\GitHub\AutoEncyclopediaApp\Auto\build\intermediates\pre-dexed\debug\classes-237206aad73b9d9c2873f090f60ea341d676b258.jar" />
+        sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6">
+        <dex dex="G:\GitHub\AutoEncyclopediaApp\Auto\build\intermediates\pre-dexed\debug\support-annotations-21.0.2-93d82eba2a9d14b8e0ac1d7365e929ffb57eefd5.jar" />
     </item>
     <item
-        jar="G:\GitHub\AutoEncyclopediaApp\Auto\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.0\classes.jar"
+        jar="G:\GitHub\AutoEncyclopediaApp\Auto\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\classes.jar"
         jumboMode="false"
         revision="21.1.0"
-        sha1="95fd37732ec852e99f07eeb516a3650172f1d136">
-        <dex dex="G:\GitHub\AutoEncyclopediaApp\Auto\build\intermediates\pre-dexed\debug\classes-ed4c5621990f6f64243a9037ce2e00a591305da8.jar" />
+        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
+        <dex dex="G:\GitHub\AutoEncyclopediaApp\Auto\build\intermediates\pre-dexed\debug\classes-0738cd61c0d0743c9de788295ddf24cf518db19d.jar" />
     </item>
     <item
-        jar="G:\GitHub\AutoEncyclopediaApp\Auto\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.0\libs\internal_impl-21.0.0.jar"
+        jar="G:\GitHub\AutoEncyclopediaApp\Auto\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.2\classes.jar"
         jumboMode="false"
         revision="21.1.0"
-        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0">
-        <dex dex="G:\GitHub\AutoEncyclopediaApp\Auto\build\intermediates\pre-dexed\debug\internal_impl-21.0.0-76d47c6248e5ce2997db6ab8186503a98fb21799.jar" />
+        sha1="7ae2d38807a43b2f2185ff4089a92c790b579e54">
+        <dex dex="G:\GitHub\AutoEncyclopediaApp\Auto\build\intermediates\pre-dexed\debug\classes-a3eada23974be1442e077812a210223e7f3d4147.jar" />
     </item>
     <item
-        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.0\support-annotations-21.0.0.jar"
+        jar="G:\GitHub\AutoEncyclopediaApp\Auto\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.2\libs\internal_impl-21.0.2.jar"
         jumboMode="false"
         revision="21.1.0"
-        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e">
-        <dex dex="G:\GitHub\AutoEncyclopediaApp\Auto\build\intermediates\pre-dexed\debug\support-annotations-21.0.0-80e839762042aeb2bf74f5dde51ddeacbb8eb838.jar" />
+        sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f">
+        <dex dex="G:\GitHub\AutoEncyclopediaApp\Auto\build\intermediates\pre-dexed\debug\internal_impl-21.0.2-744c4d1c628c537795d67bd73f9b175d4b8d7edb.jar" />
     </item>
 
 </items>

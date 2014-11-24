@@ -98,7 +98,6 @@ public class MarqInfoFragment extends Fragment implements AsyncGetImage, AsyncMa
         }
     }
 
-
     private void getInfo() {
         isRefreshing = true;
         getActivity().invalidateOptionsMenu();
@@ -251,7 +250,6 @@ public class MarqInfoFragment extends Fragment implements AsyncGetImage, AsyncMa
         // TODO: Update argument type and name
         public void onFragmentInteraction(Uri uri);
     }
-
 
 
     public void onBackPressed(){
@@ -425,5 +423,7 @@ public class MarqInfoFragment extends Fragment implements AsyncGetImage, AsyncMa
         return (AutoEncyclopedia)getActivity().getApplication();
     }
 
-
+    public String getFragID(){
+        return CurrentAuto.getMarqInfoID();
+    }
 }

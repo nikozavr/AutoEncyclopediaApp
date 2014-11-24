@@ -11,7 +11,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+        android:theme="@style/AppTheme" >
         <activity
             android:name="ru.nikozavr.auto.MainActivity"
             android:finishOnTaskLaunch="false"
@@ -19,6 +19,7 @@
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -33,13 +34,21 @@
             android:label="@string/title_activity_login"
             android:parentActivityName="ru.nikozavr.auto.MainActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize|stateVisible" >
+            android:windowSoftInputMode="adjustResize|stateVisible"
+            android:allowEmbedded = "true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.nikozavr.auto.MainActivity" />
         </activity>
         <activity
             android:name="ru.nikozavr.auto.MarqInfoActivity"
             android:label="@string/title_activity_marq_info"
             android:parentActivityName="ru.nikozavr.auto.MainActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:allowEmbedded = "true">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.nikozavr.auto.MainActivity" />
         </activity>
         <activity
             android:name="ru.nikozavr.auto.ModelInfoActivity"
@@ -59,8 +68,12 @@
         </service>
 
         <activity
-            android:name=".EditActivity"
+            android:name="ru.nikozavr.auto.EditActivity"
             android:label="@string/title_activity_edit" >
+        </activity>
+        <activity
+            android:name="ru.nikozavr.auto.BaseActivity"
+            android:label="@string/title_activity_base" >
         </activity>
     </application>
 

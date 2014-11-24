@@ -121,17 +121,18 @@ public class MarquesFragment extends Fragment implements AsyncArrayImage,AsyncAl
                     Toast.makeText(getActivity(), txt.getText(),
                             Toast.LENGTH_SHORT).show();
 
-                    Fragment fragment = new MarqInfoFragment();
-                    FragmentManager fragmentManager = getFragmentManager();
-                    fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).
-                            add(R.id.container, fragment, MarqInfoFragment.TAG).addToBackStack(MarqInfoFragment.TAG).commit();
-
-                  //  Intent i = new Intent(getActivity().getApplicationContext(), MarqInfoActivity.class);
+                   // ((MainActivity)getActivity()).fragmentsInteraction.Interact("marq_info");
+                                     //   Fragment fragment = new MarqInfoFragment();
+                 //   FragmentManager fragmentManager = getFragmentManager();
+                 //   fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).
+                 //           add(R.id.container, fragment, MarqInfoFragment.TAG).addToBackStack(MarqInfoFragment.TAG).commit();
+                    ((MainActivity)getActivity()).LaunchNewActivity();
+                   // Intent i = new Intent(getActivity().getApplicationContext(), MarqInfoActivity.class);
 
                  //  ((AutoEncyclopedia)getActivity().getApplication()).addBitmapToMemoryCache(result.get(position).getImage().getKey(),
                  //          result.get(position).getImage().getBitmap());
-                 //  i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                 //  startActivity(i);
+                  // i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                  // startActivity(i);
                 }
             });
 
@@ -159,10 +160,4 @@ public class MarquesFragment extends Fragment implements AsyncArrayImage,AsyncAl
         return (AutoEncyclopedia)getActivity().getApplication();
     }
 
-
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        ((MainActivity) activity).onSectionAttached(3);
-    }
 }

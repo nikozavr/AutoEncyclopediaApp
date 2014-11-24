@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.ConnectivityManager;
+import android.support.v4.app.FragmentManager;
 import android.util.LruCache;
 
 import java.io.File;

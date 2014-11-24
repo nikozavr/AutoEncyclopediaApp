@@ -1,11 +1,11 @@
 package ru.nikozavr.auto;
 
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.content.SharedPreferences;
@@ -19,11 +19,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
+import android.support.v7.widget.Toolbar;
+import android.support.v7.app.ActionBarDrawerToggle;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import ru.nikozavr.auto.adapter.NavDrawerListAdapter;
 import ru.nikozavr.auto.model.NavDrawerItem;
@@ -33,7 +35,7 @@ import ru.nikozavr.auto.model.NavDrawerItem;
  * See the <a href="https://developer.android.com/design/patterns/navigation-drawer.html#Interaction">
  * design guidelines</a> for a complete explanation of the behaviors implemented here.
  */
-public class NavigationDrawerFragment extends Fragment {
+public class NavigationDrawerFragment extends Fragment{
 
     /**
      * Remember the position of the selected item.
@@ -70,6 +72,9 @@ public class NavigationDrawerFragment extends Fragment {
     private ArrayList<NavDrawerItem> navDrawerItems;
     private NavDrawerListAdapter adapter;
 
+    private List<String> fragmentNames = null;
+    private int fragName = -1;
+
     public NavigationDrawerFragment() {
     }
 
@@ -86,9 +91,10 @@ public class NavigationDrawerFragment extends Fragment {
             mCurrentSelectedPosition = savedInstanceState.getInt(STATE_SELECTED_POSITION);
             mFromSavedInstanceState = true;
         }
-
+        Resources res = getResources();
+        fragmentNames = Arrays.asList(res.getStringArray(R.array.frag_names));
         // Select either the default item (0) or the last selected item.
-        selectItem(mCurrentSelectedPosition);
+      //  selectItem(mCurrentSelectedPosition);
     }
 
     @Override
@@ -97,7 +103,7 @@ public class NavigationDrawerFragment extends Fragment {
         // Indicate that this fragment would like to influence the set of actions in the action bar.
         setHasOptionsMenu(true);
 
-        selectItem(mCurrentSelectedPosition);
+       // selectItem(mCurrentSelectedPosition);
     }
 
     @Override
@@ -135,7 +141,7 @@ public class NavigationDrawerFragment extends Fragment {
                 android.R.layout.simple_list_item_activated_1,
                 android.R.id.text1,
                 getResources().getStringArray(R.array.nav_drawer_name_items)));*/
-        selectItem(mCurrentSelectedPosition);
+      //  selectItem(mCurrentSelectedPosition);
         return mDrawerListView;
     }
 
@@ -157,16 +163,16 @@ public class NavigationDrawerFragment extends Fragment {
         mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
         // set up the drawer's list view with items and click listener
 
-        ActionBar actionBar = getActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setHomeButtonEnabled(true);
+//        ActionBar actionBar = getActionBar();
+ //       actionBar.setDisplayHomeAsUpEnabled(true);
+  //      actionBar.setHomeButtonEnabled(true);
 
         // ActionBarDrawerToggle ties together the the proper interactions
         // between the navigation drawer and the action bar app icon.
         mDrawerToggle = new ActionBarDrawerToggle(
                 getActivity(),                    /* host Activity */
                 mDrawerLayout,                    /* DrawerLayout object */
-                R.drawable.ic_drawer,             /* nav drawer image to replace 'Up' caret */
+                getToolbar(),             /* nav drawer image to replace 'Up' caret */
                 R.string.navigation_drawer_open,  /* "open drawer" description for accessibility */
                 R.string.navigation_drawer_close  /* "close drawer" description for accessibility */
         ) {
@@ -200,6 +206,10 @@ public class NavigationDrawerFragment extends Fragment {
             }
         };
 
+
+
+        mDrawerToggle.setDrawerIndicatorEnabled(true);
+
         // If the user hasn't 'learned' about the drawer, open it to introduce them to the drawer,
         // per the navigation drawer design guidelines.
         if (!mUserLearnedDrawer && !mFromSavedInstanceState) {
@@ -228,6 +238,8 @@ public class NavigationDrawerFragment extends Fragment {
         if (mCallbacks != null) {
             mCallbacks.onNavigationDrawerItemSelected(position);
         }
+
+
     }
 
     @Override
@@ -266,6 +278,10 @@ public class NavigationDrawerFragment extends Fragment {
         if (mDrawerLayout != null && isDrawerOpen()) {
             inflater.inflate(R.menu.global, menu);
             showGlobalContextActionBar();
+        }else {
+            if(fragName>=0){
+                getToolbar().setTitle(fragmentNames.get(fragName));
+            }
         }
         super.onCreateOptionsMenu(menu, inflater);
     }
@@ -276,10 +292,10 @@ public class NavigationDrawerFragment extends Fragment {
             return true;
         }
 
-        if (item.getItemId() == R.id.action_example) {
-            Toast.makeText(getActivity(), "Example action.", Toast.LENGTH_SHORT).show();
-            return true;
-        }
+   //     if (item.getItemId() == R.id.action_example) {
+      //      Toast.makeText(getActivity(), "Example action.", Toast.LENGTH_SHORT).show();
+        //    return true;
+      //  }
 
         return super.onOptionsItemSelected(item);
     }
@@ -295,6 +311,11 @@ public class NavigationDrawerFragment extends Fragment {
         actionBar.setTitle(R.string.app_name);
     }
 
+    private Toolbar getToolbar() {
+        return ((BaseActivity)getActivity()).getToolBar();
+    }
+
+
     private ActionBar getActionBar() {
         return ((ActionBarActivity) getActivity()).getSupportActionBar();
     }
@@ -307,5 +328,21 @@ public class NavigationDrawerFragment extends Fragment {
          * Called when an item in the navigation drawer is selected.
          */
         void onNavigationDrawerItemSelected(int position);
+    }
+
+
+    public void ChangeToolboxIcon(boolean isArrow, int numberTitle) {
+        fragName = numberTitle;
+        getToolbar().setTitle(fragmentNames.get(fragName));
+        if(isArrow){
+            getToolbar().setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ((MainActivity)getActivity()).fragmentsInteraction.NavigiteUpFragments();
+                }
+            });
+        } else{
+            mDrawerToggle.setDrawerIndicatorEnabled(true);
+        }
     }
 }

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 /**
  * Created by nikozavr on 3/24/14.
  */
-public class Marque implements Parcelable{
+public class Marque extends Object implements Parcelable{
 
     public static final String KEY = "marque";
 
@@ -142,5 +142,9 @@ public class Marque implements Parcelable{
         _date_out = (Date)in.readValue(cl);
         _contact = (URL)in.readValue(cl);
         _image = (ImageItem)in.readParcelable(cl);
+    }
+
+    public String getID(){
+        return ((Integer)hashCode()).toString();
     }
 }

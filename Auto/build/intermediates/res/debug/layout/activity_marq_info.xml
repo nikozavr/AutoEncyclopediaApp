@@ -1,203 +1,232 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@color/background_layout"
-    android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/layout_marq_info">
 
-        <LinearLayout
-            android:orientation="horizontal"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/background_material_dark"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+    <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="ru.nikozavr.auto.MainActivity">
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
-            android:layout_height="120dp"
-            android:layout_alignParentStart="true"
-            android:paddingBottom="0dp"
-            android:background="@color/background_top"
-            android:id="@+id/layout_top">
+            android:layout_height="fill_parent"
+            android:background="@color/background_layout"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="120dp"
-                android:layout_height="fill_parent"
-                android:id="@+id/imMarq" />
-
-            <RelativeLayout
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+                android:layout_height="fill_parent"
+                android:id="@+id/layout_marq_info">
 
                 <LinearLayout
-                        android:orientation="vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="120dp"
+                    android:layout_alignParentStart="true"
+                    android:paddingBottom="0dp"
+                    android:background="@color/background_top"
+                    android:id="@+id/layout_top">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/imMarq" />
+
+                    <RelativeLayout
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent">
 
-                        <TextView
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:text="Large Text"
-                            android:id="@+id/lblMarqName"
-                            android:gravity="bottom"
-                            android:textStyle="bold"
-                            android:textSize="25dp" />
+                        <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:id="@+id/lblMarqCountry"
-                            android:text="@string/country"
-                            android:layout_gravity="center_horizontal"
-                            android:visibility="invisible" />
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:text="Large Text"
+                                    android:id="@+id/lblMarqName"
+                                    android:gravity="bottom"
+                                    android:textStyle="bold"
+                                    android:textSize="25dp" />
 
-                        <TextView
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/year"
-                            android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:id="@+id/lblMarqYear"
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:id="@+id/lblMarqCountry"
+                                    android:text="@string/country"
+                                    android:layout_gravity="center_horizontal"
+                                    android:visibility="invisible" />
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/year"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:id="@+id/lblMarqYear"
+                                    android:visibility="invisible" />
+
+                        </LinearLayout>
+
+                        <Button
+                            android:theme="@style/ActionBarButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="34dp"
+                            android:text="@string/all_models"
+                            android:id="@+id/btnMarqChange"
+                            android:layout_gravity="right"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:layout_alignParentTop="false"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentStart="false"
+                            android:layout_alignParentBottom="true"
+                            android:textSize="11dp"
+                            android:layout_marginRight="10dp"
                             android:visibility="invisible" />
+                    </RelativeLayout>
 
                 </LinearLayout>
 
-                <Button
-                    android:theme="@style/ActionBarButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="34dp"
-                    android:text="@string/all_models"
-                    android:id="@+id/btnMarqChange"
-                    android:layout_gravity="right"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
-                    android:layout_alignParentTop="false"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentStart="false"
-                    android:layout_alignParentBottom="true"
-                    android:textSize="11dp"
-                    android:layout_marginRight="10dp"
-                    android:visibility="invisible" />
-            </RelativeLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="2dp"
-            android:background="@color/background_line2"
-            android:id="@+id/layout_line"
-            android:orientation="horizontal">
-        </LinearLayout>
-
-
-        <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <ScrollView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:visibility="invisible"
-                android:id="@+id/scrollViewMarq"
-                android:scrollbars="vertical">
                 <LinearLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:background="@color/background">
+                    android:layout_height="2dp"
+                    android:background="@color/background_line2"
+                    android:id="@+id/layout_line"
+                    android:orientation="horizontal">
+                </LinearLayout>
 
-                    <HorizontalScrollView
-                         android:layout_width="fill_parent"
-                         android:layout_height="@dimen/photo_height"
-                         android:background="@color/background_layout"
-                         android:id="@+id/photo_scroll"
-                         android:layout_marginBottom="1dp"
-                         android:paddingLeft="2dp"
-                         android:scrollbars="horizontal">
-                         <LinearLayout
-                             android:layout_width="wrap_content"
-                             android:layout_height="fill_parent"
-                             android:orientation="horizontal"
-                             android:id="@+id/photoScrollMarq"
-                             android:layout_margin="0dp">
 
-                         </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
 
-                     </HorizontalScrollView>
-
-                    <LinearLayout
-                        android:orientation="vertical"
+                    <ScrollView
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:layout_below="@id/layout_top"
-                        android:id="@+id/layout_info"
-                        android:background="@color/background_layout"
-                        android:layout_marginBottom="1dp">
-                        <TextView
+                        android:visibility="invisible"
+                        android:id="@+id/scrollViewMarq"
+                        android:scrollbars="vertical">
+                        <LinearLayout
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:id="@+id/txtInfoMarq"
-                            android:layout_gravity="center_horizontal"
-                            android:padding="5dp" />
+                            android:orientation="vertical"
+                            android:background="@color/background">
 
-                    </LinearLayout>
+                            <HorizontalScrollView
+                                 android:layout_width="fill_parent"
+                                 android:layout_height="@dimen/photo_height"
+                                 android:background="@color/background_layout"
+                                 android:id="@+id/photo_scroll"
+                                 android:layout_marginBottom="1dp"
+                                 android:paddingLeft="2dp"
+                                 android:scrollbars="horizontal">
+                                 <LinearLayout
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="fill_parent"
+                                     android:orientation="horizontal"
+                                     android:id="@+id/photoScrollMarq"
+                                     android:layout_margin="0dp">
 
-                    <LinearLayout
-                        android:orientation="horizontal"
+                                 </LinearLayout>
+
+                             </HorizontalScrollView>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_below="@id/layout_top"
+                                android:id="@+id/layout_info"
+                                android:background="@color/background_layout"
+                                android:layout_marginBottom="1dp">
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="?android:attr/textAppearanceSmall"
+                                    android:id="@+id/txtInfoMarq"
+                                    android:layout_gravity="center_horizontal"
+                                    android:padding="5dp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="visible"
+                                android:id="@+id/layoutWeb"
+                                android:baselineAligned="false"
+                                android:background="@color/background_layout"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:id="@+id/imgWeb"
+                                    android:background="@drawable/ic_action_web_site"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:text="New Text"
+                                    android:id="@+id/txtWeb"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="15dp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <ListView
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:visibility="visible"
-                        android:id="@+id/layoutWeb"
-                        android:baselineAligned="false"
-                        android:background="@color/background_layout"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:padding="5dp">
+                        android:layout_height="fill_parent"
+                        android:id="@+id/lstModels"
+                        android:visibility="invisible"
+                        android:listSelector="@color/blue"
+                        android:choiceMode="singleChoice"/>
+                </RelativeLayout>
 
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:id="@+id/imgWeb"
-                            android:background="@drawable/ic_action_web_site"
-                            android:visibility="visible" />
+            </LinearLayout>
 
-                        <TextView
-                            android:layout_width="fill_parent"
-                            android:layout_height="fill_parent"
-                            android:text="New Text"
-                            android:id="@+id/txtWeb"
-                            android:gravity="center_vertical"
-                            android:paddingLeft="15dp" />
 
-                    </LinearLayout>
 
-                </LinearLayout>
-            </ScrollView>
-
-            <ListView
+            <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:id="@+id/lstModels"
-                android:visibility="invisible"
-                android:listSelector="@color/blue"
-                android:choiceMode="singleChoice"/>
+                android:text="@string/downloading"
+                android:gravity="center"
+                android:layout_alignParentStart="false"
+                android:textSize="26dp"
+                android:textColor="#000000"
+                android:id="@+id/lblDownloadMarq" />
+
         </RelativeLayout>
 
-    </LinearLayout>
+    </android.support.v4.widget.DrawerLayout>
 
-
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:text="@string/downloading"
-        android:gravity="center"
-        android:layout_alignParentStart="false"
-        android:textSize="26dp"
-        android:textColor="#000000"
-        android:id="@+id/lblDownloadMarq" />
-
-</RelativeLayout><!-- From: file:/G:/GitHub/AutoEncyclopediaApp/Auto/src/main/res/layout/activity_marq_info.xml -->
+</LinearLayout><!-- From: file:/G:/GitHub/AutoEncyclopediaApp/Auto/src/main/res/layout/activity_marq_info.xml -->

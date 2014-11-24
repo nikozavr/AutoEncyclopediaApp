@@ -2,10 +2,10 @@
 <resources>
     <!-- From: file:/G:/GitHub/AutoEncyclopediaApp/Auto/src/main/res/values-v14/styles.xml -->
     <eat-comment/>
-    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- API 14 theme customizations can go here. -->
     </style>
-    <!-- From: file:/G:/GitHub/AutoEncyclopediaApp/Auto/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/res/values-v14/values.xml -->
+    <!-- From: file:/G:/GitHub/AutoEncyclopediaApp/Auto/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values-v14/values.xml -->
     <eat-comment/>
     <style name="Base.Theme.AppCompat" parent="Base.V14.Theme.AppCompat">
         <item name="android:actionModeCutDrawable">?actionModeCutDrawable</item>

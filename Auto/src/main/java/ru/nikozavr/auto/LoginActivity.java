@@ -8,6 +8,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -64,13 +65,24 @@ public class LoginActivity extends ActionBarActivity {
 
     private AutoEncyclopedia globe;
 
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_login);
 
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.inflateMenu(R.menu.main);
+        toolbar.setTitle(getResources().getString(R.string.title_activity_login));
+        toolbar.setNavigationIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
+
+        setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // Set up the login form.
        // mEmail = getIntent().getStringExtra();
         mLoginView = (EditText) findViewById(R.id.txtlogin);

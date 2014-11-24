@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_fragment"
     tools:context="ru.nikozavr.auto.fragments.MarqInfoFragment">
 
     <LinearLayout
@@ -67,7 +68,7 @@
                     android:theme="@style/ActionBarButton"
 
                     android:layout_width="wrap_content"
-                    android:layout_height="32dp"
+                    android:layout_height="35dp"
                     android:text="@string/all_models"
                     android:id="@+id/btnMarqChange"
                     android:layout_gravity="right"

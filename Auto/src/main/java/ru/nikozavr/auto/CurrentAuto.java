@@ -14,6 +14,8 @@ public class CurrentAuto {
     private static Model _model = null;
     private static Generation _generetion = null;
 
+    private static String marq_info = "marq_info";
+
     public void CurrentAuto(){
 
     }
@@ -47,4 +49,13 @@ public class CurrentAuto {
     public static synchronized Generation getGeneration(){
         return mInstance._generetion;
     }
+
+    public static synchronized String getMarqInfoID() {
+        return new String(marq_info + _marque.getID());
+    }
+
+    public static synchronized String getFragNameModelInfo() {
+        return null;
+    }
+
 }

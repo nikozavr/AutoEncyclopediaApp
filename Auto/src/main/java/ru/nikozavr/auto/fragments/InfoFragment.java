@@ -23,9 +23,5 @@ public class InfoFragment extends Fragment {
         return rootView;
     }
 
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        ((MainActivity) activity).onSectionAttached(6);
-    }
+
 }

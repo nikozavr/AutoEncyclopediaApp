@@ -7,7 +7,12 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Parcel;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -24,12 +29,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import ru.nikozavr.auto.adapter.ImageDownloadView;
 import ru.nikozavr.auto.adapter.ImageForScrolling;
 import ru.nikozavr.auto.adapter.ListModelAdapter;
+import ru.nikozavr.auto.fragments.HelpFragment;
+import ru.nikozavr.auto.fragments.HistoryFragment;
+import ru.nikozavr.auto.fragments.HomeFragment;
+import ru.nikozavr.auto.fragments.InfoFragment;
+import ru.nikozavr.auto.fragments.MarqInfoFragment;
 import ru.nikozavr.auto.fragments.MarquesFragment;
+import ru.nikozavr.auto.fragments.ProfileFragment;
 import ru.nikozavr.auto.instruments.database.Images.Array.AsyncArrayImage;
 import ru.nikozavr.auto.instruments.database.Images.Array.GetArrayImage;
 import ru.nikozavr.auto.instruments.database.Images.Single.AsyncGetImage;
@@ -42,13 +54,18 @@ import ru.nikozavr.auto.model.ImageItem;
 import ru.nikozavr.auto.model.Marque;
 import ru.nikozavr.auto.model.Model;
 
-public class MarqInfoActivity extends MainActivity implements AsyncGetImage, AsyncMarqInfo, AsyncMarqModels, AsyncArrayImage {
+public class MarqInfoActivity extends BaseActivity implements AsyncGetImage, AsyncMarqInfo, AsyncMarqModels, AsyncArrayImage,
+        NavigationDrawerFragment.NavigationDrawerCallbacks,  MarqInfoFragment.OnFragmentInteractionListener{
 
     private DictionaryCountries trans;
 
     private LinearLayout CarsViewLayout;
 
     private Boolean isRefreshing;
+
+    private NavigationDrawerFragment mNavigationDrawerFragment;
+
+    private Toolbar toolbar;
 
 
     private void reset(){
@@ -106,11 +123,24 @@ public class MarqInfoActivity extends MainActivity implements AsyncGetImage, Asy
 
         super.onCreate(savedInstanceState);
 //        requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
-        setContentView(R.layout.activity_marq_info);
+    //    setContentView(R.layout.activity_marq_info);
+
+    //    toolbar = (Toolbar) findViewById(R.id.toolbar);
+      //  toolbar.inflateMenu(R.menu.main);
+    //    setSupportActionBar(toolbar);
+
+
+   //     mNavigationDrawerFragment = (NavigationDrawerFragment)
+    //            getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
+
+        // Set up the drawer.
+  //      mNavigationDrawerFragment.setUp(
+   //             R.id.navigation_drawer,
+   //             (DrawerLayout) findViewById(R.id.drawer_layout));
 
 //        getActionBar().setDisplayHomeAsUpEnabled(true);
 
-       LinearLayout web = (LinearLayout) findViewById(R.id.layoutWeb);
+  /*     LinearLayout web = (LinearLayout) findViewById(R.id.layoutWeb);
        web.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -148,6 +178,15 @@ public class MarqInfoActivity extends MainActivity implements AsyncGetImage, Asy
         });
 
         getInfo();
+        */
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        Fragment fragment = new MarqInfoFragment();
+        String tag = getResources().getString(R.string.tag_marq_info);
+        fragmentManager.beginTransaction()
+                .add(R.id.container, fragment, tag).addToBackStack(tag).commit();
+        getSupportActionBar().setTitle(getResources().getString(R.string.title_activity_marq_info));
+        Toolbar too = getToolBar();
+        too.setNavigationIcon(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
     }
 
     public void onBackPressed(){
@@ -165,15 +204,15 @@ public class MarqInfoActivity extends MainActivity implements AsyncGetImage, Asy
 
     @Override
     public boolean onPrepareOptionsMenu (Menu menu){
-        super.onPrepareOptionsMenu(menu);
-        if(isRefreshing){
+        return super.onPrepareOptionsMenu(menu);
+/*        if(isRefreshing){
             menu.findItem(R.id.action_marq_refresh).setVisible(false);
             setProgressBarIndeterminateVisibility(true);
         } else {
             menu.findItem(R.id.action_marq_refresh).setVisible(true);
             setProgressBarIndeterminateVisibility(false);
         }
-        return true;
+        return true;*/
     }
 
     @Override
@@ -191,8 +230,8 @@ public class MarqInfoActivity extends MainActivity implements AsyncGetImage, Asy
           //      return true;
             case R.id.action_marq_refresh:
                 item.setVisible(false);
-                reset();
-                getInfo();
+              //  reset();
+              //  getInfo();
                 return true;
           //  case R.id.action_marq_settings:
           //      return true;
@@ -320,4 +359,25 @@ public class MarqInfoActivity extends MainActivity implements AsyncGetImage, Asy
         return (AutoEncyclopedia)getApplication();
     }
 
+    public MainActivity getParentActivity(){
+        return (MainActivity)getParent();
+    }
+
+
+
+    @Override
+    public void onNavigationDrawerItemSelected(int position) {
+     //   MainActivity ta = getParentActivity();
+
+     //   ta.onNavigationDrawerItemSelected(position);
+        Intent intent = new Intent();
+        intent.putExtra("position", position);
+        setResult(RESULT_OK, intent);
+        finish();
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
 }
